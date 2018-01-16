@@ -1,8 +1,8 @@
 # -*- coding:utf-8 -*-
-import tensorflow as tf
 import os
+import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
-import mnist_inference
+from mnist import mnist_inference
 
 BATCH_SIZE = 100
 LEARNING_RATE_BASE = 0.8
@@ -17,7 +17,7 @@ def train(mnist):
     x = tf.placeholder(tf.float32, [None, mnist_inference.INPUT_NODE], name='x-input')
     y_ = tf.placeholder(tf.float32, [None, mnist_inference.OUTPUT_NODE], name='y-input')
     regularizer = tf.contrib.layers.l2_regularizer(REGULARAZTION_RATE)
-    y = mnist_inference.inference(x,regularizer)
+    y = mnist_inference.inference(x, regularizer)
     global_step = tf.Variable(0, trainable=False)
     variable_averages = tf.train.ExponentialMovingAverage(MOVING_AVERAGE_DECAY, global_step)
     variable_averages_op = variable_averages.apply(tf.trainable_variables())

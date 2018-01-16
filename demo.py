@@ -1,9 +1,11 @@
-import tensorflow as tf
-from tensorflow.python.platform import gfile
-with tf.Session() as sess:
-    model_filename = 'model/combined_model.pb'
-    with gfile.FastGFile(model_filename, 'rb') as f:
-        graph_def = tf.GraphDef()
-        graph_def.ParseFromString(f.read())
-    result = tf.import_graph_def(graph_def,return_elements=['add:0'])
-    print(sess.run(result))
+import numpy as np
+def demo1(a):
+    if len(a()) <=10:
+        print('aa')
+    else:
+        print('大于10')
+@demo1
+def demo():
+    print('123')
+    return 'good evening'
+demo()

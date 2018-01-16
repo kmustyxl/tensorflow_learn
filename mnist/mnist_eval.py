@@ -1,9 +1,11 @@
 # -*- coding:utf-8 -*-
 import time
+
+import mnist_inference
 import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
-import mnist_inference
-import mnist_train
+
+from mnist import mnist_train
 
 EVAL_INTERVAL_SECS = 10
 def evaluate(mnist):
