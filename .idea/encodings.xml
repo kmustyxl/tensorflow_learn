@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/LeNet-5/cnn_mnist_inference.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/迁移学习/Inception-v3.py" charset="UTF-8" />
     <file url="PROJECT" charset="GB2312" />
   </component>
 </project>
